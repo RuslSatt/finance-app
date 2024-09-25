@@ -9,6 +9,7 @@ import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 
 import { usePrimeVue } from './shared/ui';
+import { router } from './app/router/router';
 
 const app = createApp(App);
 
@@ -26,5 +27,7 @@ app.use(PrimeVue, {
 });
 
 usePrimeVue(app);
+
+app.use(router);
 
 app.mount('#app');

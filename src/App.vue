@@ -1,13 +1,9 @@
 <template>
     <div>
-        <!-- <LoginPage /> -->
-        <RegistrationPage />
+        <RouterView />
     </div>
 </template>
 
-<script setup lang="ts">
-import LoginPage from './pages/login/ui/LoginPage.vue';
-import RegistrationPage from './pages/login/ui/RegistrationPage.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

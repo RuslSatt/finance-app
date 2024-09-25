@@ -1,1 +1,3 @@
-export { AuthForm } from './ui/AuthForm.vue';
+import AuthForm from './ui/AuthForm.vue';
+
+export { AuthForm };
