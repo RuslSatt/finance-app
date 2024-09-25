@@ -17,7 +17,10 @@ app.use(createPinia());
 // UI Library
 app.use(PrimeVue, {
     theme: {
-        preset: Aura
+        preset: Aura,
+        options: {
+            darkModeSelector: '.app-dark'
+        }
     },
     ripple: true
 });
