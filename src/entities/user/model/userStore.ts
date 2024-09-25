@@ -1,11 +1,19 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export interface User {
-    id: number;
-    name: string;
-    email: string;
-    token: string;
+interface User {
+    id: string;
+    app_metadata: {
+        provider?: string;
+        roles?: string[];
+    };
+    created_at: string;
+    email: string | null;
+    family_name: string | null;
+    given_name: string | null;
+    user_metadata: {
+        [key: string]: any;
+    };
 }
 
 export const useUserStore = defineStore('user', () => {
@@ -20,8 +28,8 @@ export const useUserStore = defineStore('user', () => {
         localStorage.setItem('user', JSON.stringify(data));
     }
 
-    /** Выход, обнуление пользователя */
-    function logout() {
+    /** Очистка пользователя */
+    function clearUser() {
         user.value = null;
         localStorage.removeItem('user');
     }
@@ -32,5 +40,5 @@ export const useUserStore = defineStore('user', () => {
         if (data) user.value = JSON.parse(data);
     }
 
-    return { user, setUser, logout, initUser };
+    return { user, setUser, clearUser, initUser };
 });
