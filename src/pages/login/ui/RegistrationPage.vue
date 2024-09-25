@@ -6,19 +6,15 @@
             </div>
             <div class="form">
                 <p class="form-title">Registration</p>
-                <div class="form-content">
-                    <p-input type="email" placeholder="Email" />
-                    <p-input type="password" placeholder="Password" />
-                    <p-input type="password" placeholder="Confirm password" />
-                    <p-button class="btn" type="submit" label="Register" />
-                    <p-button class="btn-auth" link label="Already have an account? Login" />
-                </div>
+                <AuthForm />
             </div>
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { AuthForm } from '@/features/auth';
+</script>
 
 <style scoped>
 .wrapper {
@@ -48,15 +44,6 @@
     font-size: 24px;
     font-weight: 700;
     color: var(--p-primary-color);
-}
-
-.form-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    padding: 0 20px;
-    max-width: 350px;
 }
 
 .preview {
