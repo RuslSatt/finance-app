@@ -1,3 +1,4 @@
-import AuthForm from './ui/AuthForm.vue';
+import RegistrationForm from './ui/RegistrationForm.vue';
+import LoginForm from './ui/LoginForm.vue';
 
-export { AuthForm };
+export { RegistrationForm, LoginForm };

@@ -6,14 +6,14 @@
             </div>
             <div class="form">
                 <p class="form-title">Registration</p>
-                <AuthForm type="register" />
+                <RegistrationForm />
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { AuthForm } from '@/features/auth';
+import { RegistrationForm } from '@/features/auth';
 </script>
 
 <style scoped>
