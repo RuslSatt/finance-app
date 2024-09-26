@@ -6,7 +6,7 @@
             </div>
             <div class="form">
                 <p class="form-title">Login</p>
-                <AuthForm />
+                <AuthForm type="login" />
             </div>
         </div>
     </div>
