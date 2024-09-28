@@ -5,11 +5,12 @@ import './app/styles/reset.css';
 import './app/styles/main.css';
 
 import App from './App.vue';
-import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 
 import { usePrimeVue } from './shared/ui';
 import { router } from './app/router/router';
+import { themePreset } from './shared/ui/theme';
+import 'primeicons/primeicons.css';
 
 const app = createApp(App);
 
@@ -18,7 +19,7 @@ app.use(createPinia());
 // UI Library
 app.use(PrimeVue, {
     theme: {
-        preset: Aura,
+        preset: themePreset,
         options: {
             darkModeSelector: '.app-dark'
         }

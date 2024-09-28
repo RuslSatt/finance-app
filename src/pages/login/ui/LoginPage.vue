@@ -36,7 +36,6 @@ import { LoginForm } from '@/features/auth';
     align-items: center;
     justify-content: center;
     flex: 0 0 50%;
-    background-color: #fff;
     gap: 20px;
 }
 

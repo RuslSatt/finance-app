@@ -1,8 +1,12 @@
 <template>
-    <div class="home-page"></div>
+    <div class="home-page">
+        <NavBar />
+    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { NavBar } from '@/widgets/navbar';
+</script>
 
 <style scoped>
 .home-page {
