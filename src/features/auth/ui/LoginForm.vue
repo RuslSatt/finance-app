@@ -43,6 +43,8 @@ const validateErrors = ref<IValidate>({
 const authStore = useAuthStore();
 const router = useRouter();
 
+const emit = defineEmits(['login']);
+
 const handlerSubmit = async () => {
     const { result, errors } = validate({
         email: email.value,
@@ -58,6 +60,7 @@ const handlerSubmit = async () => {
     if (response) {
         router.push(AppRoutes.HOME);
     }
+    emit('login', [email.value, password.value]);
 };
 
 const onChangePage = () => {
