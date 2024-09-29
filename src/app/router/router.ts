@@ -1,13 +1,8 @@
 import { HomePage } from '@/pages/home';
 import { LoginPage, RegistrationPage } from '@/pages/login';
+import { AppRoutes } from '@/shared/router';
 import type { VueElement } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-
-enum AppRoutes {
-    HOME = '/',
-    LOGIN = '/login',
-    REGISTRATION = '/registration'
-}
 
 interface RouterPath {
     path: string;

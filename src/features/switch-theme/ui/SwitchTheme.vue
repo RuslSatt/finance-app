@@ -1,5 +1,5 @@
 <template>
-    <p-button @click="themeStore.toggleTheme" :icon="icon" class="btn-theme" />
+    <p-button @click="themeStore.toggleTheme" :icon="icon" class="btn-theme" text raised />
 </template>
 
 <script setup lang="ts">

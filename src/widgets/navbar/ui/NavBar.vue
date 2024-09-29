@@ -1,10 +1,14 @@
 <template>
     <div class="navbar">
-        <SwitchTheme class="switch-theme" />
+        <div class="navbar-buttons">
+            <SwitchTheme class="switch-theme" />
+            <LogoutButton />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import { LogoutButton } from '@/features/logout';
 import { SwitchTheme } from '@/features/switch-theme';
 </script>
 
@@ -22,6 +26,12 @@ import { SwitchTheme } from '@/features/switch-theme';
 }
 
 .switch-theme {
+    margin-left: auto;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
     margin-left: auto;
 }
 </style>

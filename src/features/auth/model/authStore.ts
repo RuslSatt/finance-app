@@ -14,7 +14,7 @@ export const useAuthStore = defineStore('auth', () => {
      * @param {string} email - адрес
      * @param {string} password - пароль
      */
-    async function signIn(email: string, password: string) {
+    async function signIn(email: string, password: string): Promise<boolean> {
         isLoading.value = true;
         errorMsg.value = '';
 
@@ -27,8 +27,13 @@ export const useAuthStore = defineStore('auth', () => {
 
             if (data) {
                 userStore.setUser(data.user as User);
+                isLoading.value = false;
+                return true;
             }
         }
+
+        isLoading.value = false;
+        return false;
     }
 
     /**
@@ -36,7 +41,7 @@ export const useAuthStore = defineStore('auth', () => {
      * @param {string} email - адрес
      * @param {string} password - пароль
      */
-    async function signUp(email: string, password: string) {
+    async function signUp(email: string, password: string): Promise<boolean> {
         isLoading.value = true;
         errorMsg.value = '';
 
@@ -49,8 +54,13 @@ export const useAuthStore = defineStore('auth', () => {
 
             if (data) {
                 userStore.setUser(data.user as User);
+                isLoading.value = false;
+                return true;
             }
         }
+
+        isLoading.value = false;
+        return false;
     }
 
     /** Выход из аккаунта (удаление пользователя из хранилища) */
