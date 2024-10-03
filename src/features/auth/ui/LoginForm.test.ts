@@ -6,7 +6,7 @@ import { globalTestConfig } from '@/shared/config/globalTestConfig';
 test('submit form', async () => {
     const wrapper = mount(LoginForm, {
         global: {
-            ...globalTestConfig
+            ...globalTestConfig()
         }
     });
 

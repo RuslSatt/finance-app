@@ -46,6 +46,8 @@ const router = useRouter();
 const emit = defineEmits(['login']);
 
 const handlerSubmit = async () => {
+    emit('login', [email.value, password.value]);
+
     const { result, errors } = validate({
         email: email.value,
         password: password.value
@@ -60,7 +62,6 @@ const handlerSubmit = async () => {
     if (response) {
         router.push(AppRoutes.HOME);
     }
-    emit('login', [email.value, password.value]);
 };
 
 const onChangePage = () => {
